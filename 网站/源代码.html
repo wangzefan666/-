@@ -1,0 +1,79 @@
+<html>
+<head>
+<style type=text/css>
+pre{color:#000000}</style>
+</head>
+<body bgcolor="PaleGoldenRod">
+<pre><font color="#336600">#include</font><font color="#ff0000"><</font>stdio.h<font color="#ff0000">></font></pre>
+<pre><font color="#336600">void</font> aver<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre><font color="#336600">void</font> search_1<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre><font color="#336600">void</font> search_2<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre><font color="#336600">int</font> <font color="#336600">main</font><font color="#ff0000">(</font><font color="#336600">void</font><font color="#ff0000">)</font></pre>
+<pre><font color="#ff0000">{</font></pre>
+<pre>    <font color="#336600">float</font> score<font color="#ff0000">[</font><font color="#990099">4</font><font color="#ff0000">]</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">int</font> i<font color="#ff0000">;</font></pre>
+<pre>    printf<font color="#ff0000">(</font><font color="#000099">"请输入四个学生各五门课的成绩，用空格分开：\n"</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">for</font><font color="#ff0000">(</font>i<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>i<font color="#ff0000"><</font><font color="#990099">20</font><font color="#ff0000">;</font>i<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font> scanf<font color="#ff0000">(</font><font color="#000099">"%f"</font><font color="#ff0000">,</font>score<font color="#ff0000">[</font><font color="#990099">0</font><font color="#ff0000">]</font><font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    aver<font color="#ff0000">(</font>score<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    printf<font color="#ff0000">(</font><font color="#000099">"\n"</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    search_1<font color="#ff0000">(</font>score<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    printf<font color="#ff0000">(</font><font color="#000099">"\n"</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    search_2<font color="#ff0000">(</font>score<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">return</font> <font color="#990099">0</font><font color="#ff0000">;</font></pre>
+<pre><font color="#ff0000">}</font></pre>
+<pre><font color="#336600">void</font> aver<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font></pre>
+<pre><font color="#ff0000">{</font></pre>
+<pre>    <font color="#336600">int</font> i<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">float</font> sum<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">for</font><font color="#ff0000">(</font>i<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>sum<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>i<font color="#ff0000"><</font><font color="#990099">4</font><font color="#ff0000">;</font>i<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font>  sum<font color="#ff0000">=</font>sum<font color="#ff0000">+</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>    printf<font color="#ff0000">(</font><font color="#000099">"The average of NO.1 subject is %5.2f\n"</font><font color="#ff0000">,</font>sum<font color="#ff0000">/</font><font color="#990099">4.0</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre><font color="#ff0000">}</font></pre>
+<pre><font color="#336600">void</font> search_1<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font></pre>
+<pre><font color="#ff0000">{</font></pre>
+<pre>    <font color="#336600">int</font> i<font color="#ff0000">,</font>j<font color="#ff0000">,</font>num<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">float</font> sum<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">for</font><font color="#ff0000">(</font>i<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>i<font color="#ff0000"><</font><font color="#990099">4</font><font color="#ff0000">;</font>i<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>    <font color="#ff0000">{</font></pre>
+<pre>        <font color="#336600">for</font><font color="#ff0000">(</font>j<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>num<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>j<font color="#ff0000"><</font><font color="#990099">5</font><font color="#ff0000">;</font>j<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>        <font color="#ff0000">{</font></pre>
+<pre>            <font color="#336600">if</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000"><</font><font color="#990099">60</font><font color="#ff0000">)</font> num<font color="#ff0000">=</font>num<font color="#ff0000">+</font><font color="#990099">1</font><font color="#ff0000">;</font></pre>
+<pre>        <font color="#ff0000">}</font></pre>
+<pre>        <font color="#336600">if</font><font color="#ff0000">(</font>num<font color="#ff0000">></font><font color="#ff0000">=</font><font color="#990099">2</font><font color="#ff0000">)</font></pre>
+<pre>        <font color="#ff0000">{</font></pre>
+<pre>            printf<font color="#ff0000">(</font><font color="#000099">"NO.%d student fail\nhis scores are:"</font><font color="#ff0000">,</font>i<font color="#ff0000">+</font><font color="#990099">1</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>            <font color="#336600">for</font><font color="#ff0000">(</font>j<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>sum<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>j<font color="#ff0000"><</font><font color="#990099">5</font><font color="#ff0000">;</font>j<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>            <font color="#ff0000">{</font></pre>
+<pre>                printf<font color="#ff0000">(</font><font color="#000099">"%5.2f "</font><font color="#ff0000">,</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>                sum<font color="#ff0000">=</font>sum<font color="#ff0000">+</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>            <font color="#ff0000">}</font></pre>
+<pre>            printf<font color="#ff0000">(</font><font color="#000099">"\nhis average is %5.2f\n"</font><font color="#ff0000">,</font>sum<font color="#ff0000">/</font><font color="#990099">5.0</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>        <font color="#ff0000">}</font></pre>
+<pre>    <font color="#ff0000">}</font></pre>
+<pre><font color="#ff0000">}</font></pre>
+<pre><font color="#336600">void</font> search_2<font color="#ff0000">(</font><font color="#336600">float</font> <font color="#ff0000">(</font><font color="#ff0000">*</font>p<font color="#ff0000">)</font><font color="#ff0000">[</font><font color="#990099">5</font><font color="#ff0000">]</font><font color="#ff0000">)</font></pre>
+<pre><font color="#ff0000">{</font></pre>
+<pre>    <font color="#336600">int</font> i<font color="#ff0000">,</font>j<font color="#ff0000">,</font>num<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">float</font> sum<font color="#ff0000">;</font></pre>
+<pre>    <font color="#336600">for</font><font color="#ff0000">(</font>i<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>i<font color="#ff0000"><</font><font color="#990099">4</font><font color="#ff0000">;</font>i<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>    <font color="#ff0000">{</font></pre>
+<pre>        <font color="#336600">for</font><font color="#ff0000">(</font>j<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>sum<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>num<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>j<font color="#ff0000"><</font><font color="#990099">5</font><font color="#ff0000">;</font>j<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>        <font color="#ff0000">{</font></pre>
+<pre>            sum<font color="#ff0000">=</font>sum<font color="#ff0000">+</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>            <font color="#336600">if</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">></font><font color="#990099">85</font><font color="#ff0000">)</font>  num<font color="#ff0000">=</font>num<font color="#ff0000">+</font><font color="#990099">1</font><font color="#ff0000">;</font></pre>
+<pre>        <font color="#ff0000">}</font></pre>
+<pre>        <font color="#336600">if</font><font color="#ff0000">(</font>sum<font color="#ff0000">></font><font color="#990099">450.0</font><font color="#ff0000">|</font><font color="#ff0000">|</font>num<font color="#ff0000">=</font><font color="#ff0000">=</font><font color="#990099">5</font><font color="#ff0000">)</font>  </pre>
+<pre>        <font color="#ff0000">{</font></pre>
+<pre>            printf<font color="#ff0000">(</font><font color="#000099">"NO.%d student succeed\nhis scores are:"</font><font color="#ff0000">,</font>i<font color="#ff0000">+</font><font color="#990099">1</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>            <font color="#336600">for</font><font color="#ff0000">(</font>j<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">,</font>sum<font color="#ff0000">=</font><font color="#990099">0</font><font color="#ff0000">;</font>j<font color="#ff0000"><</font><font color="#990099">5</font><font color="#ff0000">;</font>j<font color="#ff0000">+</font><font color="#ff0000">+</font><font color="#ff0000">)</font></pre>
+<pre>            <font color="#ff0000">{</font></pre>
+<pre>                printf<font color="#ff0000">(</font><font color="#000099">"%5.2f "</font><font color="#ff0000">,</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>                sum<font color="#ff0000">=</font>sum<font color="#ff0000">+</font><font color="#ff0000">*</font><font color="#ff0000">(</font><font color="#ff0000">*</font><font color="#ff0000">(</font>p<font color="#ff0000">+</font>i<font color="#ff0000">)</font><font color="#ff0000">+</font>j<font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>            <font color="#ff0000">}</font></pre>
+<pre>            printf<font color="#ff0000">(</font><font color="#000099">"\nhis average is %5.2f\n"</font><font color="#ff0000">,</font>sum<font color="#ff0000">/</font><font color="#990099">5.0</font><font color="#ff0000">)</font><font color="#ff0000">;</font></pre>
+<pre>        <font color="#ff0000">}</font></pre>
+<pre>    <font color="#ff0000">}</font></pre>
+<pre>    </pre>
+<pre><font color="#ff0000">}</font></pre>
+
+</body>
+</html>
