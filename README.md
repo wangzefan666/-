@@ -1,5 +1,5 @@
 <html>
-<body bgcolor="Khaki">
+<body bgcolor="Blue">
 
 亲爱的何老师：
 <blockquote>
